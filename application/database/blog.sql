@@ -50,7 +50,7 @@ CREATE TABLE IF NOT EXISTS `blog`.`post` (
   `img` VARCHAR(50) CHARACTER SET 'utf8' NULL DEFAULT NULL,
   `datacadastro` DATETIME NOT NULL,
   `texto` TEXT CHARACTER SET 'utf8' NOT NULL,
-  `views` INT(11) NOT NULL,
+  `views` INT(11) NULL DEFAULT NULL,
   `categoria_id` INT(11),
   `usuario_id` INT(11),
   PRIMARY KEY (`id`),
