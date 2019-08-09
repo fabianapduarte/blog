@@ -9,7 +9,7 @@
 		<!-- Bootstrap JavaScript -->
 		<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
 
-		<title>My Blog - Página Inicial</title>
+		<title><?php echo $titulo; ?></title>
 	</head>
 
 	<body>

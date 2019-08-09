@@ -4,10 +4,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Home extends CI_Controller {
 
 	public function index() {
-		$data['post'] = $this->db->get('post')->result();
+		$postagens['post'] = $this->db->get('post')->result();
+		$data['titulo'] = 'My Blog - Página Inicial';
+		$data['pagina'] = 'Home';
 
-		$this->load->view('menu');
-		$this->load->view('content', $data);
+		$this->load->view('menu', $data);
+		$this->load->view('content', $postagens);
 	}
 
 }

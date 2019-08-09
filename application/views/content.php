@@ -33,7 +33,7 @@
 
 				<div class="col-4">
 					<div class="border my-5">
-						<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+						<p>about me</p>
 					</div>
 				</div>	
 
