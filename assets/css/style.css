@@ -1,0 +1,8 @@
+.slideshow {
+	margin-top: 150px;
+}
+
+.carousel-inner {
+	height: 50vh;
+	background-color: #6c757d;
+}
