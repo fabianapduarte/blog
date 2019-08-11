@@ -6,29 +6,35 @@
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-5 border">
-                  <h1>Título da publicação</h1>
-                  <h4>Descrição da publicação</h4>
-                  <button class="btn btn-primary">Ler mais</button>
-                </div>
-                <div class="col-md-7">
-                  <img class="w-100" src="<?php echo base_url(); ?>assets/img/img1.jpg" alt="Primeiro Slide">
-                </div>
-              </div>
-              
+          <?php 
+            $item_class = ' active';
+            $image = ' ';
+            foreach ($posts as $post) {
+              if ($post->img == null) {
+                $image = 'img0.jpg';
+              }
+              else {
+                $image = $post->img;
+              }
+           ?>
+          <div class="carousel-item <?php echo $item_class; ?>">
+            <img class="d-block w-100" src="<?php echo base_url(); ?>assets/img/<?php echo $image; ?>" alt="Segundo Slide">
+            <div class="carousel-caption d-none d-md-block text-left">
+              <h1><?php echo $post->titulo ?></h1>
+              <?php 
+                if ($post->descricao != null) {
+               ?>
+              <p><?php echo $post->descricao; ?></p>
+              <?php 
+                }
+               ?>
             </div>
-            
           </div>
 
-          <div class="carousel-item">
-            <img src="<?php echo base_url(); ?>assets/img/img2.jpg" alt="Segundo Slide">
-          </div>
-          <div class="carousel-item">
-            <img src="<?php echo base_url(); ?>assets/img/img3.jpg" alt="Terceiro Slide">
-          </div>
+          <?php 
+              $item_class = ' ';
+            }
+           ?>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
