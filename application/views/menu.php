@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang='pt-br'>
 	<head>
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/bootstrap.css">
@@ -25,13 +25,13 @@
 			</button>
 			<div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
 				<ul class="navbar-nav">
-					<li class="nav-item">
+					<li class="nav-item <?php echo $pagina == 'Home' ? 'active' : ' '?> ">
 						<a class="nav-link" href="#">Home</a>
 					</li>
-					<li class="nav-item">
+					<li class="nav-item <?php echo $pagina == 'Posts' ? 'active' : ' '?>">
 						<a class="nav-link" href="#">Posts</a>
 					</li>
-					<li class="nav-item">
+					<li class="nav-item <?php echo $pagina == 'Categorias' ? 'active' : ' '?> ">
 						<a class="nav-link" href="#">Categorias</a>
 					</li>
 					<li class="nav-item dropdown">
