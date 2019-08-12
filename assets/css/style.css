@@ -1,9 +1,9 @@
 .slideshow {
-	margin-top: 100px;
+	margin-top: 78px;
 }
 
-.carousel-item {
-	height: 70vh;
+.carousel-inner, .carousel-item.img, .carousel-indicators {
+	height: 70vh !important;
 }
 .carousel-item img {
 	object-fit: cover;

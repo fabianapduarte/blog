@@ -21,13 +21,7 @@
             <img class="d-block w-100" src="<?php echo base_url(); ?>assets/img/<?php echo $image; ?>" alt="Segundo Slide">
             <div class="carousel-caption d-none d-md-block text-left">
               <h1><?php echo $post->titulo ?></h1>
-              <?php 
-                if ($post->descricao != null) {
-               ?>
-              <p><?php echo $post->descricao; ?></p>
-              <?php 
-                }
-               ?>
+              <p><?php echo $post->descricao != null ? $post->descricao: ''; ?></p>
             </div>
           </div>
 
