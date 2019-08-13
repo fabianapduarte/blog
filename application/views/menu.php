@@ -11,13 +11,17 @@
 
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/style.css">
 
+		<!-- Ícone da página -->
+		<link rel="shortcut icon" href="<?php echo base_url();?>assets/img/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="<?php echo base_url();?>assets/img/favicon.ico" type="image/x-icon">
+
 		<title><?php echo $titulo; ?></title>
 	</head>
 
 	<body>
 		<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top py-3 px-5">
-			<a class="navbar-brand" href="#">
-				<img src="<?php echo base_url(); ?>assets/img/icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
+			<a class="navbar-brand" href="home/index">
+				<img src="<?php echo base_url(); ?>assets/img/icon.png" width="30" height="30" class="d-inline-block align-top" alt="Ícone do blog">
 				My Blog
 			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
