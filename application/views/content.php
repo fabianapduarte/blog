@@ -47,7 +47,7 @@
 				<div class="col-7">
 					<div class="display-4 my-5">Novas publicações</div>
           <?php foreach ($posts as $p) {?>
-          <div class="card-group">
+          <div class="card-group mb-5">
 						<div class="card">
 							<img class="card-img-top" src="<?php echo base_url(); ?>assets/img/<?php echo $image; ?>" alt="Imagem de capa do card">
 							<div class="card-body">
@@ -56,9 +56,8 @@
 								<p class="card-text"><small class="text-muted"><?php echo $p->datacadastro; ?></small></p>
 							</div>
 						</div>
-            
 					</div>
-           <?php } ?>
+          <?php } ?>
 				</div>
 
 				<div class="col-4">
