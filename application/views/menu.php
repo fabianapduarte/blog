@@ -22,7 +22,7 @@
 	</head>
 
 	<body>
-		<nav class="navbar navbar-expand-lg navbar-light bg-light py-3 px-5">
+		<nav class="navbar navbar-expand-lg navbar-light py-3 px-5" style="background-color: white;">
 			<a class="navbar-brand font-serif" href="home/index">
 				<img src="<?php echo base_url(); ?>assets/img/icon.png" width="30" height="30" class="d-inline-block align-top" alt="Ícone do blog">
 				My Blog
@@ -46,7 +46,7 @@
 						<a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							<img src="<?php echo base_url(); ?>assets/img/<?php echo $user->img; ?>" width="30" height="30" class="d-inline-block align-top rounded-circle">
 						</a>
-						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+						<div class="dropdown-menu dropdown-menu-right rounded-0" aria-labelledby="navbarDropdownMenuLink">
 							<a class="dropdown-item" href="#">Meu perfil</a>
 							<a class="dropdown-item" href="#">Sair</a>
 						</div>
