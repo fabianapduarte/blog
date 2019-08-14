@@ -1,7 +1,7 @@
-.carousel-item img, .carousel-item, .carousel {
+.carousel-item img, .cacrousel-item, .carousel {
 	height: 60vh !important;
 }
-.carousel-item img, .img-user img {
+.carousel-item img {
 	object-fit: cover;
 }
 .carousel-caption {
@@ -12,4 +12,11 @@
 }
 .font {
 	font-family: 'Lato', sans-serif !important;
+}
+.carousel-indicators li {
+	width: 10px;
+	height: 10px;
+}
+.carousel-control-prev, .carousel-control-next{
+	width: 100px;
 }
