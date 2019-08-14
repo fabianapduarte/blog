@@ -15,12 +15,15 @@
 		<link rel="shortcut icon" href="<?php echo base_url();?>assets/img/favicon.ico" type="image/x-icon">
 		<link rel="icon" href="<?php echo base_url();?>assets/img/favicon.ico" type="image/x-icon">
 
+		<!-- Fonte da página -->
+		<link href="https://fonts.googleapis.com/css?family=DM+Serif+Text:400i|Lato&display=swap" rel="stylesheet">
+
 		<title><?php echo $titulo; ?></title>
 	</head>
 
 	<body>
-		<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top py-3 px-5">
-			<a class="navbar-brand" href="home/index">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light py-3 px-5">
+			<a class="navbar-brand font-serif" href="home/index">
 				<img src="<?php echo base_url(); ?>assets/img/icon.png" width="30" height="30" class="d-inline-block align-top" alt="Ícone do blog">
 				My Blog
 			</a>
@@ -38,15 +41,17 @@
 					<li class="nav-item <?php echo $pagina == 'Categorias' ? 'active' : ' '?> ">
 						<a class="nav-link" href="#">Categorias</a>
 					</li>
+					<?php foreach ($usuario as $user) { ?>
 					<li class="nav-item dropdown">
 						<a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							<img src="<?php echo base_url(); ?>assets/img/user.png" width="30" height="30" class="d-inline-block align-top" alt="">
+							<img src="<?php echo base_url(); ?>assets/img/<?php echo $user->img; ?>" width="30" height="30" class="d-inline-block align-top rounded-circle">
 						</a>
 						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
 							<a class="dropdown-item" href="#">Meu perfil</a>
 							<a class="dropdown-item" href="#">Sair</a>
 						</div>
 					</li>
+				<?php } ?>
 				</ul>
 			</div>
 		</nav>

@@ -8,18 +8,11 @@
         <div class="carousel-inner">
           <?php 
             $item_class = ' active';
-            $image = ' ';
             foreach ($carousel as $post) {
-              if ($post->img == null) {
-                $image = 'img0.jpg';
-              }
-              else {
-                $image = $post->img;
-              }
            ?>
           <div class="carousel-item <?php echo $item_class; ?>">
-            <img class="d-block w-100" src="<?php echo base_url(); ?>assets/img/<?php echo $image; ?>" alt="Segundo Slide">
-            <div class="carousel-caption d-none d-md-block text-left">
+            <img class="d-block w-100" src="<?php echo base_url(); ?>assets/img/<?php echo $post->img; ?>" alt="Segundo Slide">
+            <div class="carousel-caption d-md-block text-left">
               <h1><?php echo $post->titulo ?></h1>
               <p><?php echo $post->descricao != null ? $post->descricao: ''; ?></p>
             </div>
@@ -44,29 +37,38 @@
 
     <div class="container">
 			<div class="row justify-content-between">
-				<div class="col-7">
-					<div class="display-4 my-5">Novas publicações</div>
+				<div class="col-md-7">
+					<div class="display-4 my-5 font-serif">Novas publicações</div>
           <?php foreach ($posts as $p) {?>
-          <div class="card-group mb-5">
+          <div class="card-group mb-5 font">
 						<div class="card">
-							<img class="card-img-top" src="<?php echo base_url(); ?>assets/img/<?php echo $image; ?>" alt="Imagem de capa do card">
+							<img class="card-img-top" src="<?php echo base_url(); ?>assets/img/<?php echo $p->img; ?>" alt="Imagem de capa do card">
 							<div class="card-body">
-								<h5 class="card-title"><?php echo $p->titulo; ?></h5>
+								<h5 class="card-title font-serif"><?php echo $p->titulo; ?></h5>
 								<p class="card-text"><?php echo $p->descricao; ?></p>
-								<p class="card-text"><small class="text-muted"><?php echo $p->datacadastro; ?></small></p>
 							</div>
 						</div>
 					</div>
           <?php } ?>
+
+          <div>
+            <a href="#" class="btn btn-primary mb-5">Todas as publicações</a>
+          </div>
 				</div>
 
-				<div class="col-4">
-					<div class="border my-5">
-						<p>about me</p>
-					</div>
+				<div class="col-md-4">
+					<div class="about my-5 p-3">
+            <?php foreach ($usuario as $user) { ?>
+						<h3 class="text-center mb-3 font-serif">Sobre mim</h3>
+            <div class="img-user">
+              <img src="<?php echo base_url(); ?>assets/img/<?php echo $user->img ?>" class="rounded-circle" width="250" height="250">
+            </div>
+            <div class="font-serif position-relative">
+              <h5 class="text-center"><?php echo $user->nome ?></h5>
+              <p><?php echo $user->sobre ?></p>
+            </div>
+          <?php } ?>
+          </div>
 				</div>	
-
 			</div>
 		</div>
-
-		
