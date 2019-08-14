@@ -1,4 +1,4 @@
-.carousel-inner, .carousel-item, .carousel-indicators {
+.carousel-item img, .carousel-item, .carousel {
 	height: 60vh !important;
 }
 .carousel-item img, .img-user img {

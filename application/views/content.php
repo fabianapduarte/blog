@@ -15,7 +15,7 @@
            ?>
           <div class="carousel-item <?php echo $item_class; ?>">
             <img class="d-block w-100" src="<?php echo base_url(); ?>assets/img/<?php echo $post->img; ?>" alt="Segundo Slide">
-            <div class="carousel-caption d-md-block text-left">
+            <div class="carousel-caption d-md-block text-left mb-5">
               <h1><?php echo $post->titulo ?></h1>
               <p><?php echo $post->descricao != null ? $post->descricao: ''; ?></p>
             </div>
