@@ -1,4 +1,4 @@
-.carousel-inner, .carousel-item.img, .carousel-indicators {
+.carousel-inner, .carousel-item, .carousel-indicators {
 	height: 60vh !important;
 }
 .carousel-item img, .img-user img {
@@ -6,14 +6,6 @@
 }
 .carousel-caption {
 	color: black !important;
-}
-.img-user {
-	position: relative;
-}
-.img-user img {
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
 }
 .font-serif {
 	font-family: 'DM Serif Text', serif !important;
