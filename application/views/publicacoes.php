@@ -5,7 +5,7 @@
         </div>
 
         <div class="col-12">
-          <a href="#" class="btn btn-outline-primary mb-5 rounded-0">Nova publicação</a>
+          <a href="<?php echo base_url(); ?>posts/novopost" class="btn btn-outline-primary mb-5 rounded-0">Nova publicação</a>
         </div>
       </div>
 
