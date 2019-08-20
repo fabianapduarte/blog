@@ -29,7 +29,7 @@
 			<div class="collapse navbar-collapse ml-auto" id="navbarNavDropdown">
 				<ul class="navbar-nav text-uppercase">
 					<li class="nav-item <?php echo $pagina == 'Home' ? 'active' : ' '?> ">
-						<a class="nav-link" href="#">Home</a>
+						<a class="nav-link" href="<?php echo base_url(); ?>home/index">Home</a>
 					</li>
 					<li class="nav-item <?php echo $pagina == 'Posts' ? 'active' : ' '?>">
 						<a class="nav-link" href="<?php echo base_url(); ?>posts/todososposts">Posts</a>
