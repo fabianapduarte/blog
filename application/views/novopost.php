@@ -31,7 +31,7 @@
         </div>
 
         <div class="form-group">
-          <label for="img">Selecionar imagem</label>
+          <label for="img">Selecionar imagem (opcional)</label>
           <input type="file" class="form-control-file" id="img">
         </div>
 
