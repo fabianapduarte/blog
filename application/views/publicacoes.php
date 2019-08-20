@@ -1,4 +1,12 @@
     <div class="container">
+      <?php 
+        if (isset($alerta)) {
+      ?>
+      <div class="alert alert-success" role="alert">
+        <?php echo $alerta; ?>
+      </div>
+        <?php } ?>
+
       <div class="row justify-content-center my-4">
         <div class="col-12">
           <div class="font-serif display-4 text-center">Todas as Publicações</div>

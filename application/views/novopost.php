@@ -1,5 +1,6 @@
     <div class="container">
-    <div class="font-serif display-4 text-center my-4">Nova Publicação</div>
+      <div class="font-serif display-4 text-center my-4">Nova Publicação</div>
+      
       <form class="my-5">
         <div class="form-row">
           <div class="form-group col-md-8">
