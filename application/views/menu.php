@@ -23,15 +23,11 @@
 
 	<body>
 		<nav class="navbar navbar-expand-lg navbar-light py-3 px-5" style="background-color: white;">
-			<a class="navbar-brand font-serif" href="home/index">
-				<img src="<?php echo base_url(); ?>assets/img/icon.png" width="30" height="30" class="d-inline-block align-top" alt="Ícone do blog">
-				My Blog
-			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-			<div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-				<ul class="navbar-nav">
+			<div class="collapse navbar-collapse ml-auto" id="navbarNavDropdown">
+				<ul class="navbar-nav text-uppercase">
 					<li class="nav-item <?php echo $pagina == 'Home' ? 'active' : ' '?> ">
 						<a class="nav-link" href="#">Home</a>
 					</li>
@@ -41,18 +37,24 @@
 					<li class="nav-item <?php echo $pagina == 'Categorias' ? 'active' : ' '?> ">
 						<a class="nav-link" href="#">Categorias</a>
 					</li>
-					<?php foreach ($usuario as $user) { ?>
-					<li class="nav-item dropdown">
-						<a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							<img src="<?php echo base_url(); ?>assets/img/<?php echo $user->img; ?>" width="30" height="30" class="d-inline-block align-top rounded-circle">
-						</a>
-						<div class="dropdown-menu dropdown-menu-right rounded-0" aria-labelledby="navbarDropdownMenuLink">
-							<a class="dropdown-item" href="#">Meu perfil</a>
-							<a class="dropdown-item" href="#">Sair</a>
-						</div>
-					</li>
-				<?php } ?>
 				</ul>
 			</div>
+
+			<a class="navbar-brand font-serif ml-auto" href="home/index">
+				<img src="<?php echo base_url(); ?>assets/img/icon.png" width="30" height="30" class="d-inline-block align-top" alt="Ícone do blog">
+				My Blog
+			</a>
+			
+			<?php foreach ($usuario as $user) { ?>
+			<div class="nav-item dropdown justify-content-end ml-auto">
+				<a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<img src="<?php echo base_url(); ?>assets/img/<?php echo $user->img; ?>" width="30" height="30" class="d-inline-block align-top rounded-circle">
+				</a>
+				<div class="dropdown-menu dropdown-menu-right rounded-0" aria-labelledby="navbarDropdownMenuLink">
+					<a class="dropdown-item" href="#">Meu perfil</a>
+					<a class="dropdown-item" href="#">Sair</a>
+				</div>
+			</div>
+			<?php } ?>
 		</nav>
 

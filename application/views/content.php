@@ -17,7 +17,7 @@
             <img class="d-block w-100" src="<?php echo base_url(); ?>assets/img/<?php echo $post->img; ?>" alt="Segundo Slide">
             <div class="carousel-caption d-md-block text-left mb-5">
               <div class="font-serif display-4 mb-1" style="color: #F2F2F2 !important"><?php echo $post->titulo ?></div>
-              <p class="font mb-3" style="color: #F2F2F2 !important"><?php echo $post->descricao != null ? $post->descricao: ''; ?></p>
+              <h6 class="font mb-3" style="color: #F2F2F2 !important"><?php echo $post->descricao != null ? $post->descricao: ''; ?></h6>
             </div>
           </div>
 
