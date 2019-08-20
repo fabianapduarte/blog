@@ -32,7 +32,7 @@
 						<a class="nav-link" href="#">Home</a>
 					</li>
 					<li class="nav-item <?php echo $pagina == 'Posts' ? 'active' : ' '?>">
-						<a class="nav-link" href="#">Posts</a>
+						<a class="nav-link" href="<?php echo base_url(); ?>posts/todososposts">Posts</a>
 					</li>
 					<li class="nav-item <?php echo $pagina == 'Categorias' ? 'active' : ' '?> ">
 						<a class="nav-link" href="#">Categorias</a>
