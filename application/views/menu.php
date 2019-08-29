@@ -29,7 +29,7 @@
 			<div class="collapse navbar-collapse ml-auto" id="navbarNavDropdown">
 				<ul class="navbar-nav">
 					<li>
-						<a class="navbar-brand font-serif ml-auto" href="home/index">
+						<a class="navbar-brand font-serif ml-auto" href="http://localhost/blog/home/index">
 							<img src="<?php echo base_url(); ?>assets/img/icon.png" width="30" height="30" class="d-inline-block align-top" alt="Ícone do blog">
 							My Blog
 						</a>
