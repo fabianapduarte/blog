@@ -27,23 +27,24 @@
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse ml-auto" id="navbarNavDropdown">
-				<ul class="navbar-nav text-uppercase">
-					<li class="nav-item <?php echo $pagina == 'Home' ? 'active' : ' '?> ">
+				<ul class="navbar-nav">
+					<li>
+						<a class="navbar-brand font-serif ml-auto" href="home/index">
+							<img src="<?php echo base_url(); ?>assets/img/icon.png" width="30" height="30" class="d-inline-block align-top" alt="Ícone do blog">
+							My Blog
+						</a>
+					</li>
+					<li class="nav-item text-uppercase <?php echo $pagina == 'Home' ? 'active' : ' '?> ">
 						<a class="nav-link" href="<?php echo base_url(); ?>home/index">Home</a>
 					</li>
-					<li class="nav-item <?php echo $pagina == 'Posts' ? 'active' : ' '?>">
+					<li class="nav-item text-uppercase <?php echo $pagina == 'Posts' ? 'active' : ' '?>">
 						<a class="nav-link" href="<?php echo base_url(); ?>posts/todososposts">Posts</a>
 					</li>
-					<li class="nav-item <?php echo $pagina == 'Categorias' ? 'active' : ' '?> ">
+					<li class="nav-item text-uppercase <?php echo $pagina == 'Categorias' ? 'active' : ' '?> ">
 						<a class="nav-link" href="#">Categorias</a>
 					</li>
 				</ul>
 			</div>
-
-			<a class="navbar-brand font-serif ml-auto" href="home/index">
-				<img src="<?php echo base_url(); ?>assets/img/icon.png" width="30" height="30" class="d-inline-block align-top" alt="Ícone do blog">
-				My Blog
-			</a>
 			
 			<?php foreach ($usuario as $user) { ?>
 			<div class="nav-item dropdown justify-content-end ml-auto">
