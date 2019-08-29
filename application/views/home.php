@@ -54,7 +54,7 @@
             }
           ?>
           <div>
-            <a href="#" class="btn btn-outline-primary mb-5 rounded-0">Todas as publicações</a>
+            <a href="<?php echo base_url(); ?>posts/todososposts" class="btn btn-outline-primary mb-5 rounded-0">Todas as publicações</a>
           </div>
           <?php
           }
