@@ -23,9 +23,8 @@
             'name' => 'busca',
             'id' => 'busca',
             'class' => 'form-control'); ?>
-          <?php form_input($data); ?>
-          <?php $data2 = array('name' => 'form-button'); ?>
-          <?php form_submit('button_buscar', 'buscar', $data2); ?>
+          <?= form_input($data); ?>
+          <?= form_submit('button_buscar', 'buscar'); ?>
           <?= form_close();?>
         </div>
       </div>
