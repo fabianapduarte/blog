@@ -36,7 +36,7 @@ class Posts extends CI_Controller
 		$inputCategoria = $_POST['inputCategoria'];
 		$this->Post_model->categoria_id = $inputCategoria;
 
-		$inputDescricao = $_POST['inputAddress'];
+		$inputDescricao = $_POST['inputDescricao'];
 		$this->Post_model->descricao = $inputDescricao;
 		
 		$inputText = $_POST['inputText'];
@@ -46,5 +46,7 @@ class Posts extends CI_Controller
 		$this->Post_model->img = $img;
 
 		$this->Post_model->inserirPost();
+
+		header('Location: http://localhost/blog/posts/todososposts');
 	}
 }
