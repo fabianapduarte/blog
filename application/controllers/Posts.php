@@ -26,5 +26,25 @@ class Posts extends CI_Controller
         $this->load->view('menu', $data);
 		$this->load->view('novopost', $categorias, $data);
 		$this->load->view('footer');
-    }
+	}
+	
+	public function salvar()
+	{	
+		$inputTitulo = $_POST['inputTitulo'];
+		$this->Post_model->titulo = $inputTitulo;
+
+		$inputCategoria = $_POST['inputCategoria'];
+		$this->Post_model->categoria_id = $inputCategoria;
+
+		$inputDescricao = $_POST['inputAddress'];
+		$this->Post_model->descricao = $inputDescricao;
+		
+		$inputText = $_POST['inputText'];
+		$this->Post_model->texto = $inputText;
+		
+		$img = $_POST['img'];
+		$this->Post_model->img = $img;
+
+		$this->Post_model->inserirPost();
+	}
 }
