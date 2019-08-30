@@ -23,7 +23,7 @@
 
         <div class="form-group">
           <label for="inputDescricao">Descrição</label>
-          <input type="text" class="form-control" name="inputAddress" placeholder="Descrição da publicação (opcional)">
+          <input type="text" class="form-control" name="inputDescricao" placeholder="Descrição da publicação (opcional)">
         </div>
 
         <div class="form-group">
