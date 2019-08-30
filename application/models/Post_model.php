@@ -8,6 +8,7 @@ class Post_model extends CI_Model{
 	public $descricao;
 	public $texto;
 	public $img;
+	public $datacadastro;
 
 	public function recuperarPost() //método para recuperação de tabela post 
 	{
@@ -22,12 +23,19 @@ class Post_model extends CI_Model{
 		return $categorias = $this->db->get('categoria')->result();
 	}
 	public function inserirPost(){
+		if ($this->img == null) {
+			$this->img = "img0.jpg";
+		}
+
+		$this->datacadastro = date('Y/m/d H:i:s');
+
 		$data = array(
 			"titulo" => $this->titulo,
 			"categoria_id" => $this->categoria_id,
 			"descricao" => $this->descricao,
 			"texto" => $this->texto,
-			"img" => $this->img
+			"img" => $this->img,
+			"datacadastro" => $this->datacadastro
 		);
 		return $this->db->insert('post',$data);
 	}
