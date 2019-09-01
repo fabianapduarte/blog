@@ -15,6 +15,18 @@
         <div class="col-12">
           <a href="<?php echo base_url(); ?>posts/novopost" class="btn btn-outline-primary mb-5 rounded-0">Nova publicação</a>
         </div>
+
+        <div class="col-12" id="formbusca">
+          <?= form_open(base_url()."home/buscar"); ?>
+          <?= form_label('Buscar', 'busca'); ?>
+          <?php $data = array(
+            'name' => 'busca',
+            'id' => 'busca',
+            'class' => 'form-control'); ?>
+          <?= form_input($data); ?>
+          <?= form_submit('button_buscar', 'buscar'); ?>
+          <?= form_close();?>
+        </div>
       </div>
 
       <div class="row justify-content-between">

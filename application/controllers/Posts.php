@@ -49,4 +49,20 @@ class Posts extends CI_Controller
 
 		header('Location: http://localhost/blog/posts/todososposts');
 	}
+
+	public function buscar() {
+
+		$parametro['postagens'] = $this->db->get('post')->result();
+
+		$busca = $this->input->post('busca');
+		$data2['busca'] = $busca;
+		$this->db->like('titulo', $busca);
+		$this->db->or_like('conteudo', $busca);
+		$data2['postagens'] = $this->db->get('post')->result();
+
+		$this->load->view('menu');
+		$this->load->view('publicacoes', $parametro, $data2);
+		$this->load->view('footer');
+
+	}
 }
