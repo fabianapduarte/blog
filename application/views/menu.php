@@ -34,7 +34,7 @@
 				<img src="<?php echo base_url(); ?>assets/img/icon.png" width="30" height="30" class="d-inline-block align-top" alt="Ícone do blog">
 					My Blog
 			</a>
-
+	
 			<div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
 				<ul class="navbar-nav">
 					<li class="nav-item text-uppercase <?php echo $pagina == 'Home' ? 'active' : ' '?> ">
