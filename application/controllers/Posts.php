@@ -21,7 +21,7 @@ class Posts extends CI_Controller
     	$categorias['categoria'] = $this->Post_model->recuperarCategoria();
       	$data['usuario'] = $this->Post_model->recuperarUsuario();
 		$data['titulo'] = 'Nova Publicação';
-        $data['pagina'] = 'Posts';
+		$data['pagina'] = 'Posts';
         
         $this->load->view('menu', $data);
 		$this->load->view('novopost', $categorias, $data);
@@ -50,19 +50,35 @@ class Posts extends CI_Controller
 		header('Location: http://localhost/blog/posts/todososposts');
 	}
 
-	public function buscar() {
-
-		$parametro['postagens'] = $this->db->get('post')->result();
+	public function buscar()
+	{
+		$data['usuario'] = $this->Post_model->recuperarUsuario();
+		$data['titulo'] = 'Resultado da busca';
+		$data['pagina'] = 'Posts';
 
 		$busca = $this->input->post('busca');
 		$data2['busca'] = $busca;
+
 		$this->db->like('titulo', $busca);
-		$this->db->or_like('conteudo', $busca);
-		$data2['postagens'] = $this->db->get('post')->result();
+		$this->db->or_like('texto', $busca);
+		$data2['posts'] = $this->Post_model->recuperarPost();
 
-		$this->load->view('menu');
-		$this->load->view('publicacoes', $parametro, $data2);
+		$this->load->view('menu', $data);
+		$this->load->view('publicacoes', $data2);
 		$this->load->view('footer');
+	}
 
+	public function visualizar($id)
+	{
+		$data['usuario'] = $this->Post_model->recuperarUsuario();
+		$data['titulo'] = 'Publicação';
+		$data['pagina'] = 'Posts';
+
+		$parametro['postagens'] = $this->Post_model->recuperarPost();
+		$parametro2['postagens'] = $this->Post_model->getPost($id);
+
+		$this->load->view('menu', $data);
+		$this->load->view('verpost', $parametro, $parametro2);
+		$this->load->view('footer');
 	}
 }
