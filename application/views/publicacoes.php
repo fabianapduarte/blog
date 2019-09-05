@@ -17,15 +17,17 @@
         </div>
 
         <div class="col-12" id="formbusca">
-          <?= form_open(base_url()."home/buscar"); ?>
-          <?= form_label('Buscar', 'busca'); ?>
-          <?php $data = array(
-            'name' => 'busca',
-            'id' => 'busca',
-            'class' => 'form-control'); ?>
-          <?= form_input($data); ?>
-          <?= form_submit('button_buscar', 'buscar'); ?>
-          <?= form_close();?>
+          <div id="formbusca">
+            <?= form_open(base_url()."posts/buscar"); ?>
+            <?= form_label('Buscar', 'busca'); ?>
+            <?php $data = array(
+              'name' => 'busca',
+              'id' => 'busca',
+              'class' => 'form-control'); ?>
+            <?= form_input($data); ?>
+            <?= form_submit('button_buscar', 'Buscar'); ?>
+            <?= form_close();?>
+          </div>
         </div>
       </div>
 
