@@ -29,14 +29,14 @@
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-			<div class="collapse navbar-collapse ml-auto" id="navbarNavDropdown">
+
+			<a class="navbar-brand font-serif ml-auto" href="http://localhost/blog/home/index">
+				<img src="<?php echo base_url(); ?>assets/img/icon.png" width="30" height="30" class="d-inline-block align-top" alt="Ícone do blog">
+					My Blog
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
 				<ul class="navbar-nav">
-					<li>
-						<a class="navbar-brand font-serif ml-auto" href="http://localhost/blog/home/index">
-							<img src="<?php echo base_url(); ?>assets/img/icon.png" width="30" height="30" class="d-inline-block align-top" alt="Ícone do blog">
-							My Blog
-						</a>
-					</li>
 					<li class="nav-item text-uppercase <?php echo $pagina == 'Home' ? 'active' : ' '?> ">
 						<a class="nav-link" href="<?php echo base_url(); ?>home/index">Home</a>
 					</li>
