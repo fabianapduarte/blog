@@ -25,7 +25,7 @@
 	</head>
 
 	<body>
-		<nav class="navbar navbar-expand-lg navbar-light py-3 px-5" style="background-color: white;">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light py-3 px-5" style="background-color: white;">
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
 				<span class="navbar-toggler-icon"></span>
 			</button>
