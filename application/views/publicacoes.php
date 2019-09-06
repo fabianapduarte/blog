@@ -17,13 +17,14 @@
         </div>
 
         <div class="col-12" id="formbusca">
-          <div id="formbusca">
+          <div id="formbusca" class="form-group">
             <?= form_open(base_url()."posts/buscar"); ?>
-            <?= form_label('Buscar', 'busca'); ?>
+            <?= form_label('Buscar', 'busca', array('for' => 'busca')); ?>
             <?php $data = array(
               'name' => 'busca',
               'id' => 'busca',
-              'class' => 'form-control'); ?>
+              'class' => 'form-control',
+              'type' => 'text'); ?>
             <?= form_input($data); ?>
             <?= form_submit('button_buscar', 'Buscar'); ?>
             <?= form_close();?>
