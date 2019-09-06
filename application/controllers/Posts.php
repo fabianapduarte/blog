@@ -11,7 +11,7 @@ class Posts extends CI_Controller
 		$data['titulo'] = 'Todas as publicações';
 		$data['pagina'] = 'Posts';
 
-		$this->load->view('menu', $data);;
+		$this->load->view('menu', $data);
 		$this->load->view('publicacoes', $postagens, $data);
 		$this->load->view('footer');
 	}
@@ -74,11 +74,10 @@ class Posts extends CI_Controller
 		$data['titulo'] = 'Publicação';
 		$data['pagina'] = 'Posts';
 
-		$parametro['postagens'] = $this->Post_model->recuperarPost();
-		$parametro2['postagens'] = $this->Post_model->getPost($id);
+		$parametro['postagens'] = $this->Post_model->getPost($id);
 
 		$this->load->view('menu', $data);
-		$this->load->view('verpost', $parametro, $parametro2);
+		$this->load->view('verpost', $parametro, $data);
 		$this->load->view('footer');
 	}
 }
