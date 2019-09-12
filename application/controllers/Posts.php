@@ -87,7 +87,8 @@ class Posts extends CI_Controller
 		$data['titulo'] = 'Publicação';
 		$data['pagina'] = 'Posts';
 
-		$parametro['postagens'] = $this->Postagem_model->getPost($id);
+		$parametro['postagens'] = $this->Post_model->getPost($id);
+		$parametro['categoria'] = $this->Post_model->recuperarCategoria();
 
 		$this->load->view('menu', $data);
 		$this->load->view('editarpost', $parametro, $data);
@@ -101,7 +102,7 @@ class Posts extends CI_Controller
 		$data['pagina'] = 'Posts';
 
 		$postagem = $this->input->post();
-		$this->$Postagem_model->atualizar($postagem);
+		$this->$Post_model->atualizar($postagem);
 		redirect('home/index');
 	}
 }
