@@ -1,7 +1,7 @@
     <div class="container">
       <div class="font-serif display-4 text-center my-4">Nova Publicação</div>
       
-      <form class="my-5" method="post" action="<?=base_url();?>posts/atualizar">
+      <form class="my-5" method="post" action="<?=base_url();?>posts/atualizar/"<?= $postagens['id']?>>
         <div class="form-row">
           <div class="form-group col-md-8">
             <label for="inputTitulo">Título</label>

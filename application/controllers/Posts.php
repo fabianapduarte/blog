@@ -97,12 +97,24 @@ class Posts extends CI_Controller
 
 	public function atualizar()
 	{
+		$inputTitulo = $_POST['inputTitulo'];
+		$this->Post_model->titulo = $inputTitulo;
+
+		$inputCategoria = $_POST['inputCategoria'];
+		$this->Post_model->categoria_id = $inputCategoria;
+
+		$inputDescricao = $_POST['inputDescricao'];
+		$this->Post_model->descricao = $inputDescricao;
+		
+		$inputText = $_POST['inputText'];
+		$this->Post_model->texto = $inputText;
+		
 		$data['usuario'] = $this->Post_model->recuperarUsuario();
 		$data['titulo'] = 'Publicação';
 		$data['pagina'] = 'Posts';
 
 		$postagem = $this->input->post();
-		$this->$Post_model->atualizar($postagem);
+		$this->Post_model->atualizar($postagem);
 		redirect('home/index');
 	}
 }
