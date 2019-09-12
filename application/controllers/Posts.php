@@ -80,4 +80,28 @@ class Posts extends CI_Controller
 		$this->load->view('verpost', $parametro, $data);
 		$this->load->view('footer');
 	}
+
+	public function editar($id)
+	{
+		$data['usuario'] = $this->Post_model->recuperarUsuario();
+		$data['titulo'] = 'Publicação';
+		$data['pagina'] = 'Posts';
+
+		$parametro['postagens'] = $this->Postagem_model->getPost($id);
+
+		$this->load->view('menu', $data);
+		$this->load->view('editarpost', $parametro, $data);
+		$this->load->view('footer');
+	}
+
+	public function atualizar()
+	{
+		$data['usuario'] = $this->Post_model->recuperarUsuario();
+		$data['titulo'] = 'Publicação';
+		$data['pagina'] = 'Posts';
+
+		$postagem = $this->input->post();
+		$this->$Postagem_model->atualizar($postagem);
+		redirect('home/index');
+	}
 }
