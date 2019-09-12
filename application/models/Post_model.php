@@ -44,4 +44,13 @@ class Post_model extends CI_Model{
 		$query = $this->db->get('post');
 		return $query->row_array();
 	}
+
+	public function inserir($postagem) {
+		return $this->db->insert('postagem', $postagem);
+	}
+
+	public function atualizar($postagem) {
+		$this->db->where('id', $postagem['id']);
+		return $this->db->update('postagem', $postagem);
+	}
 }
