@@ -95,26 +95,21 @@ class Posts extends CI_Controller
 		$this->load->view('footer');
 	}
 
-	public function atualizar()
+	public function atualizar($id)
 	{
-		$inputTitulo = $_POST['inputTitulo'];
-		$this->Post_model->titulo = $inputTitulo;
+		$postagem['titulo'] = $_POST['inputTitulo'];
+		$this->Post_model->titulo = $postagem['titulo'];
 
-		$inputCategoria = $_POST['inputCategoria'];
-		$this->Post_model->categoria_id = $inputCategoria;
+		$postagem['categoria'] = $_POST['inputCategoria'];
+		$this->Post_model->categoria_id = $postagem['categoria'];
 
-		$inputDescricao = $_POST['inputDescricao'];
-		$this->Post_model->descricao = $inputDescricao;
-		
-		$inputText = $_POST['inputText'];
-		$this->Post_model->texto = $inputText;
-		
-		$data['usuario'] = $this->Post_model->recuperarUsuario();
-		$data['titulo'] = 'Publicação';
-		$data['pagina'] = 'Posts';
+		$postagem['descricao'] = $_POST['inputDescricao'];
+		$this->Post_model->descricao = $postagem['descricao'];
 
-		$postagem = $this->input->post();
-		$this->Post_model->atualizar($postagem);
+		$postagem['texto'] = $_POST['inputText'];
+		$this->Post_model->texto = $postagem['texto'];
+
+		$this->Post_model->atualizar($id);
 		redirect('home/index');
 	}
 }

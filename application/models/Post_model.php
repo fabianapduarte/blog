@@ -45,8 +45,15 @@ class Post_model extends CI_Model{
 		return $query->row_array();
 	}
 
-	public function atualizar($postagem) {
-		$this->db->where('id', $postagem['id']);
-		return $this->db->update('post', $postagem);
+	public function atualizar($id) {
+		$data = array(
+			"titulo" => $this->titulo,
+			"categoria_id" => $this->categoria_id,
+			"descricao" => $this->descricao,
+			"texto" => $this->texto
+		);
+
+		$this->db->where('id', $id);
+		return $this->db->update('post', $data);
 	}
 }
