@@ -112,4 +112,10 @@ class Posts extends CI_Controller
 		$this->Post_model->atualizar($id);
 		redirect('home/index');
 	}
+
+	public function excluir($id)
+	{
+		$this->Post_model->deletar($id);
+		redirect('home/index');
+	}
 }
