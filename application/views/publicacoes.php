@@ -44,7 +44,9 @@
 							<div class="card-body">
 								<h5 class="card-title font-serif"><?php echo $p->titulo; ?></h5>
                 <p class="card-text"><?php echo $p->descricao; ?></p>
-                <?= anchor('posts/visualizar/'.$p->id, 'Ver mais', array('class' => 'btn btn-outline-primary rounded-0'));?>
+                <?= anchor('posts/visualizar/'.$p->id, 'Ler post', array('class' => 'btn btn-outline-primary rounded-0'));?>
+                <?= anchor('posts/editar/'.$p->id, 'Editar post', array('class' => 'btn btn-outline-warning rounded-0'));?>
+                <?= anchor('posts/excluir/'.$p->id, 'Excluir post', array('class' => 'btn btn-outline-danger rounded-0'));?>
 							</div>
 						</div>
 					</div>
