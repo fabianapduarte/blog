@@ -48,17 +48,6 @@
 					</li>
 				</ul>
 			</div>
-
-			<?= form_open(base_url().'home/buscar');?>
-			<?= form_label("Buscar","busca");?>
-			<?php $data = array(
-				'name' => 'busca',
-				'id' => 'busca',
-				'class' => 'campo_busca');
-			?>
-			<?= form_input($data);?>
-			<?= form_submit('button_buscar','Buscar',$data);?>
-			<?= form_close();?>
 			
 			<?php foreach ($usuario as $user) { ?>
 			<div class="nav-item dropdown justify-content-end ml-auto">
