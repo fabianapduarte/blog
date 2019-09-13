@@ -1,6 +1,6 @@
     <div class="container">
       <div class="row justify-content-between">
-        <div class="col-md-7">
+        <div class="col-md-8">
           <div class="display-4 mt-5 mb-1 font-serif"><?= $postagens['titulo'];?></div>
           <small class="font text-muted">Publicado em: <?= $postagens['datacadastro'] ?></small>
           <div class="text-justify mt-5">
