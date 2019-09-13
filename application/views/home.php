@@ -46,7 +46,7 @@
 							<div class="card-body">
 								<h5 class="card-title font-serif"><?php echo $p->titulo; ?></h5>
                 <p class="card-text"><?php echo $p->descricao; ?></p>
-                <a href="#" class="btn btn-outline-primary rounded-0">Ver mais</a>
+                <?= anchor('posts/visualizar/'.$p->id, 'Ver mais', array('class' => 'btn btn-outline-primary rounded-0'));?>
 							</div>
 						</div>
 					</div>

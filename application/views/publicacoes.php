@@ -15,6 +15,21 @@
         <div class="col-12">
           <a href="<?php echo base_url(); ?>posts/novopost" class="btn btn-outline-primary mb-5 rounded-0">Nova publicação</a>
         </div>
+
+        <div class="col-12" id="formbusca">
+          <div id="formbusca" class="form-group">
+            <?= form_open(base_url()."posts/buscar"); ?>
+            <?= form_label('Buscar', 'busca', array('for' => 'busca')); ?>
+            <?php $data = array(
+              'name' => 'busca',
+              'id' => 'busca',
+              'class' => 'form-control',
+              'type' => 'text'); ?>
+            <?= form_input($data); ?>
+            <?= form_submit('button_buscar', 'Buscar'); ?>
+            <?= form_close();?>
+          </div>
+        </div>
       </div>
 
       <div class="row justify-content-between">
@@ -29,7 +44,7 @@
 							<div class="card-body">
 								<h5 class="card-title font-serif"><?php echo $p->titulo; ?></h5>
                 <p class="card-text"><?php echo $p->descricao; ?></p>
-                <a href="#" class="btn btn-outline-primary rounded-0">Ver mais</a>
+                <?= anchor('posts/visualizar/'.$p->id, 'Ver mais', array('class' => 'btn btn-outline-primary rounded-0'));?>
 							</div>
 						</div>
 					</div>
