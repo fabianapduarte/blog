@@ -39,4 +39,26 @@ class Post_model extends CI_Model{
 		);
 		return $this->db->insert('post',$data);
 	}
+	public function getPost($id) {
+		$this->db->where('id', $id);
+		$query = $this->db->get('post');
+		return $query->row_array();
+	}
+
+	public function atualizar($id) {
+		$data = array(
+			"titulo" => $this->titulo,
+			"categoria_id" => $this->categoria_id,
+			"descricao" => $this->descricao,
+			"texto" => $this->texto
+		);
+
+		$this->db->where('id', $id);
+		return $this->db->update('post', $data);
+	}
+
+	public function deletar($id) {
+		$this->db->where('id', $id);
+		return $this->db->delete('post');
+	}
 }

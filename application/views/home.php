@@ -33,7 +33,7 @@
 
     <div class="container">
 			<div class="row justify-content-between">
-				<div class="col-md-7">
+				<div class="col-md-8">
 					<div class="display-4 my-5 font-serif">Novas publicações</div>
           <?php
           if (!empty($posts)) {
@@ -46,7 +46,9 @@
 							<div class="card-body">
 								<h5 class="card-title font-serif"><?php echo $p->titulo; ?></h5>
                 <p class="card-text"><?php echo $p->descricao; ?></p>
-                <a href="#" class="btn btn-outline-primary rounded-0">Ver mais</a>
+                <?= anchor('posts/visualizar/'.$p->id, 'Ler post', array('class' => 'btn btn-outline-primary rounded-0'));?>
+                <?= anchor('posts/editar/'.$p->id, 'Editar post', array('class' => 'btn btn-outline-warning rounded-0'));?>
+                <?= anchor('posts/excluir/'.$p->id, 'Excluir post', array('class' => 'btn btn-outline-danger rounded-0'));?>
 							</div>
 						</div>
 					</div>

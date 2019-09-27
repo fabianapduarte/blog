@@ -17,15 +17,18 @@
         </div>
 
         <div class="col-12" id="formbusca">
-          <?= form_open(base_url()."home/buscar"); ?>
-          <?= form_label('Buscar', 'busca'); ?>
-          <?php $data = array(
-            'name' => 'busca',
-            'id' => 'busca',
-            'class' => 'form-control'); ?>
-          <?= form_input($data); ?>
-          <?= form_submit('button_buscar', 'buscar'); ?>
-          <?= form_close();?>
+          <div id="formbusca" class="form-group">
+            <?= form_open(base_url()."posts/buscar"); ?>
+            <?= form_label('Buscar', 'busca', array('for' => 'busca')); ?>
+            <?php $data = array(
+              'name' => 'busca',
+              'id' => 'busca',
+              'class' => 'form-control',
+              'type' => 'text'); ?>
+            <?= form_input($data); ?>
+            <?= form_submit('button_buscar', 'Buscar'); ?>
+            <?= form_close();?>
+          </div>
         </div>
       </div>
 
@@ -41,7 +44,9 @@
 							<div class="card-body">
 								<h5 class="card-title font-serif"><?php echo $p->titulo; ?></h5>
                 <p class="card-text"><?php echo $p->descricao; ?></p>
-                <a href="#" class="btn btn-outline-primary rounded-0">Ver mais</a>
+                <?= anchor('posts/visualizar/'.$p->id, 'Ler post', array('class' => 'btn btn-outline-primary rounded-0'));?>
+                <?= anchor('posts/editar/'.$p->id, 'Editar post', array('class' => 'btn btn-outline-warning rounded-0'));?>
+                <?= anchor('posts/excluir/'.$p->id, 'Excluir post', array('class' => 'btn btn-outline-danger rounded-0'));?>
 							</div>
 						</div>
 					</div>
