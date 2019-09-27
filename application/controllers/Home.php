@@ -19,17 +19,4 @@ class Home extends CI_Controller {
 		$this->load->view('footer');
 	}
 
-	public function buscar(){
-		$parametro['posts'] = $this->db->get('post')->result();
-		
-		$busca = $this->input->post('busca');
-		$data['busca'] = $busca;
-		$this->db->like('titulo',$busca);
-		$this->db->or_like('descricao',$busca);
-		$data['post'] = $this->db->get('post')->result();
-		
-		$this->load->view('pesquisa',$data);
-		
-	}
-
 }
