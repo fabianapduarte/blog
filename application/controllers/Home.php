@@ -8,9 +8,9 @@ class Home extends CI_Controller {
 	}
 
 	public function index() {
-		$postagens['posts'] = $this->db->get('post')->result();
-		$postagens['carousel'] = $this->db->get('post', 3)->result();
-		$data['usuario'] = $this->db->get('usuario', 1)->result();
+		$postagens['posts'] = $this->Post_model->recuperarNovosPosts();
+		$postagens['carousel'] = $this->Post_model->recuperarPostCarousel();
+		$data['usuario'] = $this->Post_model->recuperarUsuario();
 		$data['titulo'] = 'My Blog - Página Inicial';
 		$data['pagina'] = 'Home';
 

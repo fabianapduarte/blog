@@ -10,6 +10,12 @@ class Post_model extends CI_Model{
 	public $img;
 	public $datacadastro;
 
+	public function recuperarPostCarousel() {
+		return $postagens = $this->db->get('post', 3)->result();
+	}
+	public function recuperarNovosPosts() {
+		return $postagens = $this->db->get('post', 5)->result();
+	}
 	public function recuperarPost() //método para recuperação de tabela post 
 	{
 		return $postagens = $this->db->get('post')->result();
